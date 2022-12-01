@@ -12,6 +12,7 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -22,32 +23,40 @@
     <script src="scripts/points_de_vente.js"></script>
     <script src="scripts/produit.js"></script>
     <script src="scripts/navigation.js"></script>
+    <script src="scripts/connexion.js"></script>
 
 </head>
 <body>
-<header id="navigation">
-    <nav>
-        <a href="#"><img src="images/logo.png" alt="Logo de Pro-Gramme" /></a><br />
-        <div id="menu-principal">
-            <div class="barre-menu">
-                <a href="#/" >Accueil</a>
-                <a href="#/inscription">Inscription</a>
-                <a href="#/produit" id="menu_produit">Produits</a>
-                <div class="deroulant"><button class="btn-deroulant">À propos</button>
-                    <div class="sous-menu">
-                        <a href="#/points_de_vente">Points de ventes</a>
-                        <a href="histoire.html">Notre histoire</a>
-                    </div>
-                </div>
-            </div>
+<nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="fa fa-dumbbell"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#/">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#/produit">Produits</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        À propos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#/points_de_vente">Points de ventes</a></li>
+                        <li><a class="dropdown-item" href="histoire.html">Notre histoire</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-    </nav>
-</header>
+        <a class="btn btn-outline-success" type="button" href="#/inscription" data-bs-toggle="modal">Inscription</a>
+        <a class="btn btn-outline-success" type="button" href="#/connexion" data-bs-toggle="modal">Connexion</a>
+    </div>
+</nav>
 <div id="corps-principal">
-
 </div>
-<footer>
-    Pro-Gramme - Tous droits réservés
-</footer>
 </body>
 </html>
