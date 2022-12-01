@@ -125,6 +125,19 @@ nav{
     margin-left: 34%;
 }
 
+#section-connexion {
+    width: 66%;
+    margin-left: 39%;
+}
+
+#section-connexion .form-group{
+    margin-bottom: 30px;
+}
+
+#section-connexion .bouton_Connexion{
+    text-align: center;
+}
+
 #section-inscription{
     width: 66%;
     margin: auto;
