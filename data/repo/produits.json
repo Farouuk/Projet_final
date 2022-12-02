@@ -18,7 +18,7 @@
         "nom": "Whey",
         "description": "La whey est une poudre de protéines efficaces pour la prise de masse",
         "prix": 64.99,
-        "qte_inventaire": 97,
+        "qte_inventaire": 96,
         "categorie": {
             "id": 2,
             "nom": "Poudre",
@@ -27,45 +27,6 @@
     },
     {
         "id": 2,
-        "serial": "pd2",
-        "nom": "BCAA",
-        "description": "Les BCAA est un supplément qui hydrate plus que l'eau ",
-        "prix": 40.99,
-        "qte_inventaire": 98,
-        "categorie": {
-            "id": 2,
-            "nom": "Poudre",
-            "description": "Supplément alimentaire"
-        }
-    },
-    {
-        "id": 3,
-        "serial": "pd3",
-        "nom": "Creatine",
-        "description": "La creatine est un supplement qui augmente la retention d'eau dans les muscles",
-        "prix": 27.99,
-        "qte_inventaire": 97,
-        "categorie": {
-            "id": 2,
-            "nom": "Poudre",
-            "description": "Supplément alimentaire"
-        }
-    },
-    {
-        "id": 4,
-        "serial": "pd4",
-        "nom": "Mass gainer",
-        "description": "Le mass gainer est un supplement tres calorique pour la prise de masse",
-        "prix": 64.99,
-        "qte_inventaire": 50,
-        "categorie": {
-            "id": 2,
-            "nom": "Poudre",
-            "description": "Supplément alimentaire"
-        }
-    },
-    {
-        "id": 5,
         "serial": "tt1",
         "nom": "Testosterone pure",
         "description": "La testosterone influence grandement la croissance musculaire, mais diminue la duree de vie",
@@ -78,46 +39,46 @@
         }
     },
     {
-        "id": 6,
-        "serial": "tt2",
-        "nom": "Estrogen",
-        "description": "L'estrogene influence grandement le developpement feminin",
-        "prix": 111.99,
-        "qte_inventaire": 100,
+        "id": 3,
+        "serial": "muscle1",
+        "nom": "Le bicep",
+        "description": "Achat directement d'un bicep pour ne pas avoir a s'entrainer",
+        "prix": 765.99,
+        "qte_inventaire": 48,
         "categorie": {
-            "id": 1,
-            "nom": "Injection",
-            "description": "Direct dans les veines!"
+            "id": 4,
+            "nom": "muscle",
+            "description": "Tu es fou d'acheter ce truc :)"
         }
     },
     {
-        "id": 7,
-        "serial": "pd3",
-        "nom": "Full max vitamine",
-        "description": "Un supplement remplit de vitamines A,B,C venant de tout les legumes que vous detestez.",
-        "prix": 31.99,
-        "qte_inventaire": 100,
+        "id": 4,
+        "serial": "muscle1",
+        "nom": "Abdominaux de reve",
+        "description": "Achete les, cela fait 3 ans que tu essais mais tu n'y arrives toujours pas",
+        "prix": 9999,
+        "qte_inventaire": 49,
         "categorie": {
-            "id": 2,
-            "nom": "poudre",
-            "description": "Supplément alimentaire"
+            "id": 4,
+            "nom": "muscle",
+            "description": "Tu es fou d'acheter ce truc :)"
         }
     },
     {
-        "id": 8,
+        "id": 5,
         "serial": "pd4",
-        "nom": "Collagen",
-        "description": "Aide le developpement d'une peau saine et aide la digestion",
-        "prix": 11.99,
+        "nom": "Mass gainer",
+        "description": "Le mass gainer est un supplement tres calorique pour la prise de masse",
+        "prix": 64.99,
         "qte_inventaire": 50,
         "categorie": {
             "id": 2,
-            "nom": "poudre",
+            "nom": "Poudre",
             "description": "Supplément alimentaire"
         }
     },
     {
-        "id": 9,
+        "id": 6,
         "serial": "pot1",
         "nom": "CBD",
         "description": "Permet de reduire l'inflammation et le stress",
@@ -130,7 +91,59 @@
         }
     },
     {
+        "id": 7,
+        "serial": "tt2",
+        "nom": "Estrogen",
+        "description": "L'estrogene influence grandement le developpement feminin",
+        "prix": 111.99,
+        "qte_inventaire": 100,
+        "categorie": {
+            "id": 1,
+            "nom": "Injection",
+            "description": "Direct dans les veines!"
+        }
+    },
+    {
+        "id": 8,
+        "serial": "pd3",
+        "nom": "Full max vitamine",
+        "description": "Un supplement remplit de vitamines A,B,C venant de tout les legumes que vous detestez.",
+        "prix": 31.99,
+        "qte_inventaire": 100,
+        "categorie": {
+            "id": 2,
+            "nom": "poudre",
+            "description": "Supplément alimentaire"
+        }
+    },
+    {
+        "id": 9,
+        "serial": "pd4",
+        "nom": "Collagen",
+        "description": "Aide le developpement d'une peau saine et aide la digestion",
+        "prix": 11.99,
+        "qte_inventaire": 50,
+        "categorie": {
+            "id": 2,
+            "nom": "poudre",
+            "description": "Supplément alimentaire"
+        }
+    },
+    {
         "id": 10,
+        "serial": "pd2",
+        "nom": "BCAA",
+        "description": "Les BCAA est un supplément qui hydrate plus que l'eau ",
+        "prix": 40.99,
+        "qte_inventaire": 98,
+        "categorie": {
+            "id": 2,
+            "nom": "Poudre",
+            "description": "Supplément alimentaire"
+        }
+    },
+    {
+        "id": 11,
         "serial": "om1",
         "nom": "Omega 3",
         "description": "Supplement d'huile de poisson qui procure de bon gras pour le cerveau",
@@ -143,29 +156,16 @@
         }
     },
     {
-        "id": 11,
-        "serial": "muscle1",
-        "nom": "Le bicep",
-        "description": "Achat directement d'un bicep pour ne pas avoir a s'entrainer",
-        "prix": 765.99,
-        "qte_inventaire": 50,
+        "id": 12,
+        "serial": "pd3",
+        "nom": "Creatine",
+        "description": "La creatine est un supplement qui augmente la retention d'eau dans les muscles",
+        "prix": 27.99,
+        "qte_inventaire": 96,
         "categorie": {
-            "id": 4,
-            "nom": "muscle",
-            "description": "Tu es fou d'acheter ce truc :)"
-        }
-    },
-    {
-        "id": 11,
-        "serial": "muscle1",
-        "nom": "Les abdominaux de tes reves",
-        "description": "Achete les, cela fait 3 ans que tu essais mais tu n'y arrives toujours pas",
-        "prix": 9999,
-        "qte_inventaire": 50,
-        "categorie": {
-            "id": 4,
-            "nom": "muscle",
-            "description": "Tu es fou d'acheter ce truc :)"
+            "id": 2,
+            "nom": "Poudre",
+            "description": "Supplément alimentaire"
         }
     }
 ]
