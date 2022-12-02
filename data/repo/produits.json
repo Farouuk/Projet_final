@@ -5,7 +5,7 @@
         "nom": "Banane",
         "description": "La banane est remplit de potassium!",
         "prix": 0.79,
-        "qte_inventaire": 99,
+        "qte_inventaire": 97,
         "categorie": {
             "id": 0,
             "nom": "Fruit",
@@ -31,7 +31,7 @@
         "nom": "Testosterone pure",
         "description": "La testosterone influence grandement la croissance musculaire, mais diminue la duree de vie",
         "prix": 145.99,
-        "qte_inventaire": 100,
+        "qte_inventaire": 99,
         "categorie": {
             "id": 1,
             "nom": "Injection",
@@ -44,7 +44,7 @@
         "nom": "Le bicep",
         "description": "Achat directement d'un bicep pour ne pas avoir a s'entrainer",
         "prix": 765.99,
-        "qte_inventaire": 48,
+        "qte_inventaire": 53,
         "categorie": {
             "id": 4,
             "nom": "muscle",
@@ -161,7 +161,7 @@
         "nom": "Creatine",
         "description": "La creatine est un supplement qui augmente la retention d'eau dans les muscles",
         "prix": 27.99,
-        "qte_inventaire": 96,
+        "qte_inventaire": 97,
         "categorie": {
             "id": 2,
             "nom": "Poudre",

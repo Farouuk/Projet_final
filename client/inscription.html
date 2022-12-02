@@ -1,5 +1,6 @@
 <h1 id="para-1" class="centrer">Inscription au Pro-Gramme</h1>
-<p class="centrer">Ces abonnements ne servent à rien mis-à-part enrichir Farouk Oussaada et Yanis Gharbi, deux jeunes étudiants avec des troubles financiers catastrophiques.</p>
+<p class="centrer">Ces abonnements ne servent à rien mis-à-part enrichir Farouk Oussaada et Yanis Gharbi, deux jeunes
+    étudiants avec des troubles financiers catastrophiques.</p>
 <section id="section-inscription">
     <table id="table-inscription">
         <caption>Types d'abonnement</caption>
@@ -29,7 +30,7 @@
             <td>Abonnement pour les milliardaires</td>
         </tr>
     </table>
-    <form method="post" action="confirmation.html">
+    <form method="post" action="clients">
         <fieldset id="#renseignement-auth">
             <legend>Renseignements d'authentification</legend>
             <div class="group">
@@ -39,6 +40,14 @@
             <div class="group">
                 <label for="nom">Nom</label>
                 <input type="text" name="nom" id="nom" required/>
+            </div>
+            <div class="group">
+                <label for="age">Age</label>
+                <input type="age" name="age" id="age" required/>
+            </div>
+            <div class="group">
+                <label for="address">Adresse</label>
+                <input type="address" name="age" id="address" required/>
             </div>
             <div class="group">
                 <label for="courriel">Adresse courriel</label>
@@ -61,7 +70,7 @@
             </div>
         </fieldset>
         <div class="group submit-group">
-            <input class="btn btn-primary" type="submit" value="Submit">
+            <input class="btn btn-primary" onclick="inscriptionClient()" type="submit" value="Submit">
         </div>
     </form>
 </section>
