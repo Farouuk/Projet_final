@@ -21,6 +21,10 @@ router.get('/connexion', function(req, res){
     res.sendFile(path.join(__dirname + '/../client/connexion.html'));
 });
 
+router.get('/FAQ', function(req, res){
+    res.sendFile(path.join(__dirname + '/../client/FAQ.html'));
+});
+
 router.get('/points_de_vente', function(req, res){
     res.sendFile(path.join(__dirname + '/../client/points_de_vente.html'));
 });
