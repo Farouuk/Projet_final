@@ -12,9 +12,12 @@ function connexion() {
     console.log(document.getElementById("courriel").value);
 
     $.ajax({
-        url: "/connexion/",
-        method: "POST",
-        data: JSON.stringify({"courriel": COURRIEL, "mdp": MDP}),
+        url: '/connexion',
+        type: 'post',
+        data: {
+            courriel: COURRIEL,
+            mdp: MDP,
+        },
         contentType: "application/json",
         success: function (result) {
             TOKEN_CLIENT = result.token;
@@ -28,8 +31,8 @@ function connexion() {
                 window.location.replace('#/produit')
             }
         },
-        error: function (result) {
-            window.location.replace('#/');
+        error: function(xhr, ajaxOptions, thrownError) {
+            console.log(xhr.responseText);
         }
     });
 

@@ -1,6 +1,7 @@
 ID_CLIENT = 1
 TOKEN_CLIENT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZENsaWVudCI6MSwicm9sZSI6ImNsaWVudCIsImlhdCI6MTYzNjc1MjI1MywiZXhwIjoxODM2NzUyMjUzfQ.qMcKC0NeuVseNSeGtyaxUvadutNAfzxlhL5LYPsRB8k"
 
+
 function add_item(id_item) {
     $.ajax({
         url: "/clients/" + ID_CLIENT + "/panier",
@@ -27,7 +28,9 @@ function item_to_html(item) {
     item_detail = $('<ul></ul>')
         .addClass('list-unstyled mt-3 mb-4')
         .append('<li>Qte dispo :' + item.qte_inventaire + '</li>')
-        .append('<li>Categorie. :' + item.categorie.nom + '</li>');
+        .append('<li>Categorie. :' + item.categorie.nom + '</li>')
+        .append('<div class="d-flex justify-content-center">' + '<button type="button" class="btn btn-primary position-relative" onclick="add_item(' + item.id + ')">' +
+            '<i class="bi bi-cart-plus"></i>' + '</button>' + '</div>');
 
     item_body = $('<div></div>')
         .addClass('card-body')
@@ -35,16 +38,20 @@ function item_to_html(item) {
         .append(item_detail)
         .append('<small class="small">' + item.description + '</small>' +
             '<p class="w-100 display-6 text-center">' +
-            '<button type="button" class="btn btn-primary position-relative" onclick="add_item(' + item.id + ')">' +
-            '<i class="bi bi-cart-plus"></i>' +
             '</button>' +
-            '</p>');
-
+            '</p>')
+        .append('<img class="myImg"  src="images/' + item.nom + '.png" alt="' + item.nom + '" width="50%" height="50%">' +
+            '<div id="myModal" class="modal">' +
+            '<span class="close">&times;</span>' +
+            '<img class="modal-content" id="img">' +
+            '<div id="caption"></div>' +
+            '</div>');
 
     item_card.append(item_head).append(item_body);
 
     return $('<div></div>').addClass('col-md-3').append(item_card);
 }
+
 
 
 function chargerproduit() {
@@ -53,11 +60,37 @@ function chargerproduit() {
         success: function (result) {
             // console.log(result);
             $.each(result, function (key, value) {
-                item = item_to_html(value);
-                $('#list_items').append(item);
+            item = item_to_html(value);
+            $('#list_items').append(item);
+
+                var modal = document.getElementById("myModal");
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                var img = document.getElementsByClassName("myImg");
+                var modalImg = document.getElementById("img");
+                var captionText = document.getElementById("caption");
+
+                for (const e in img) {
+                    img[e].onclick = function () {
+                        modalImg.src = this.src;
+                        modal.style.display = "block";
+                        captionText.innerHTML = this.alt;
+                    }
+                }
+
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+
             });
         }
     });
+
 }
 
 function chargerpanier() {
@@ -74,9 +107,9 @@ function chargerpanier() {
 
                 item = $("<tr>" +
                     "<td>" + value.nomProduit + "</td> " +
-                    "<td>" + value.prix + "</td> " +
+                    "<td>" + value.prix.toFixed(2) + "</td> " +
                     "<td>" + value.quantite + "</td> " +
-                    "<td>" + value.prix * value.quantite + "</td> " +
+                    "<td>" + value.prix.toFixed(2) * value.quantite + "</td> " +
                     "</tr>");
 
                 $('#cart_details').append(item);
