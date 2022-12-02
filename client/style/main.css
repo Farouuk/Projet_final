@@ -1,5 +1,5 @@
 :root{
-    --fond-menu : #444444;
+    --fond-menu : #145a00;
     --couleur-menu : aliceblue;
     --fond-menu-inverse: salmon;
     --couleur-menu-inverse: #223;
@@ -63,6 +63,15 @@ nav{
     padding: 14px 16px;
     text-decoration: none;
     transition: color 0.5s, background-color 0.5s;
+}
+
+.card-header {
+    background-color: #198754 !important;
+}
+
+.btn-primary {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
 }
 
 .deroulant {
