@@ -1,22 +1,3 @@
-function menuGaucheClic(lien){
-    let menu = document.getElementById('menu-gauche');
-    let liens = menu.children;
-    for (let i = 0 ; i<liens.length ; i++){
-        liens[i].classList.remove("choisi")
-    }
-    lien.classList.add("choisi");
-}
-
-function attacherListenerMenuGauche(){
-    let menu = document.getElementById("menu-gauche");
-    let liens = menu.children;
-    for (let i = 0 ; i<liens.length ; i++){
-        liens[i].addEventListener('click', function(){
-            menuGaucheClic(liens[i])
-        });
-    }
-}
-
 var prenom = document.getElementById("prenom");
 var nom = document.getElementById("nom");
 var courriel = document.getElementById("courriel");
@@ -33,12 +14,56 @@ jsonBtn.addEventListener("click", function(){
     }
     //convert JavaScript object to JSON
     jsonText.innerHTML = JSON.stringify(data)
+    $.ajax({
+        url: '/clients',
+        type: 'post',
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        success: function (result) {
+            console.log(result);
+        }
+    });
 })
+
+function inscriptionClient() {
+    let PRENOM = document.getElementById("prenom").value;
+    let NOM = document.getElementById("nom").value;
+    let AGE = document.getElementById("age").value;
+    let ADRESSE = document.getElementById("adresse").value;
+    let PAYS = document.getElementById("pays").value;
+    let COURRIEL = document.getElementById("courriel").value;
+    let MDP = document.getElementById("mdp").value;
+    $.ajax({
+        url: "/clients/",
+        method: "POST",
+        data: JSON.stringify({
+            "mdp": MDP,
+            "prenom": PRENOM,
+            "nom": NOM,
+            "age": AGE,
+            "adresse": ADRESSE,
+            "pays": PAYS,
+            "courriel": COURRIEL
+        }),
+        data: JSON.stringify({
+            "mdp": MDP,
+            "prenom": PRENOM,
+            "nom": NOM,
+            "age": AGE,
+            "adresse": ADRESSE,
+            "pays": PAYS,
+            "courriel": COURRIEL
+        }),
+        contentType: "application/json"
+    });
+}
 /**
  * Fonction qui initie le lancement des fonctions de ce script. Appelée par "chargerSousContenu" dans navigation.js.
  * Remplace le DOMContentLoaded qui est lancé bien avant que le contenu associé à ce script ne soit dans l'écran.
  * @returns {Promise<void>}
  */
 async function chargerinscription (){
-    attacherListenerMenuGauche()
+    console.log("chargerinscription");
+    // await chargerproduit();
+    // await chargerpanier();
 }

@@ -12,6 +12,8 @@ function add_item(id_item) {
         },
         success: function (result) {
             $('#item_counter').text(result.items.length)
+            console.log(result)
+            chargerpanier()
         }
     });
 }
@@ -29,7 +31,7 @@ function item_to_html(item) {
         .addClass('list-unstyled mt-3 mb-4')
         .append('<li>Qte dispo :' + item.qte_inventaire + '</li>')
         .append('<li>Categorie. :' + item.categorie.nom + '</li>')
-        .append('<div class="d-flex justify-content-center">' + '<button type="button" class="btn btn-primary position-relative" onclick="add_item(' + item.id + ')">' +
+        .append('<div class="d-flex justify-content-center">' + '<button type="button" class="btn btn-primary position-relative" onclick="add_item(' +item.id+ ')">' +
             '<i class="bi bi-cart-plus"></i>' + '</button>' + '</div>');
 
     item_body = $('<div></div>')
@@ -93,6 +95,21 @@ function chargerproduit() {
 
 }
 
+function remove_item(id_item) {
+    $.ajax({
+        url: "/clients/" + ID_CLIENT + "/panier/" + id_item,
+        method: "DELETE",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', "Basic " + TOKEN_CLIENT);
+        },
+        success: function (result) {
+            console.log(result)
+            $('#cart_details').empty();
+            chargerpanier();
+        }
+    });
+}
+
 function chargerpanier() {
     $.ajax({
         url: "/clients/" + ID_CLIENT + "/panier",
@@ -101,21 +118,27 @@ function chargerpanier() {
             xhr.setRequestHeader('Authorization', "Basic " + TOKEN_CLIENT);
         },
         success: function (result) {
-            console.log(result)
+            $('#total').empty();
             $("#total").text(result.valeur);
             $.each(result.items, function (key, value) {
 
                 item = $("<tr>" +
                     "<td>" + value.nomProduit + "</td> " +
+                    '<td> <img id ="imgPanier" class ="center" src="images/' + value.nomProduit + '.png"> </td>' +
                     "<td>" + value.prix.toFixed(2) + "</td> " +
                     "<td>" + value.quantite + "</td> " +
-                    "<td>" + value.prix.toFixed(2) * value.quantite + "</td> " +
+                    "<td>" + (value.prix * value.quantite).toFixed(2) + "</td> " +
+                    '<td> <h3 class="bi bi-x-square-fill" onclick="remove_item(' +value.id + ')"></h3><br></section></td>' +
                     "</tr>");
 
                 $('#cart_details').append(item);
             });
         }
     });
+}
+
+function one(obj){
+    var item = $(obj).prev().andSelf().remove();
 }
 
 

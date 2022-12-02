@@ -74,6 +74,9 @@ nav{
     border-color: #198754 !important;
 }
 
+.submit-group .btn-primary{
+    margin: auto 230px auto auto;
+}
 .deroulant {
     float: left;
     overflow: hidden;
@@ -396,3 +399,48 @@ form .group select{
     padding-top: 20px;
 }
 
+#para-1{
+    padding-top: 40px;
+}
+
+.bi-x-square-fill{
+    color: rgba(255, 0, 0, 0.87);
+}
+
+.bi-x-square-fill:hover{
+    color: rgba(255, 0, 0, 0.87);
+    cursor: pointer;
+}
+
+#imgPanier{
+    width: 20%;
+    height: 20%;
+
+}
+
+.col-md-2{
+    position: center;
+}
+
+.col-md-2 .btn-outline-success{
+    position: relative;
+    margin: 15px auto;
+}
+
+#notDone{
+    color: rgba(255, 0, 0, 0.87);
+    border-color: rgba(255, 0, 0, 0.87);
+}
+
+#notDone:hover{
+    color: white;
+    border-color: rgba(255, 0, 0, 0.87);
+    background-color: rgba(255, 0, 0, 0.87);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
