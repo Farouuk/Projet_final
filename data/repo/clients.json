@@ -9,33 +9,8 @@
         "courriel": "aaa@bbb.com",
         "mdp": "$2b$08$CEfAuisfWI/driqC4REyfOo/y8RG0g1dw7ngClRLBk1QANEs.U53u",
         "panier": {
-            "valeur": 10145.78,
-            "items": [
-                {
-                    "id": 0,
-                    "idProduit": 2,
-                    "nomProduit": "Testosterone pure",
-                    "descriptionProduit": "La testosterone influence grandement la croissance musculaire, mais diminue la duree de vie",
-                    "prix": 145.99,
-                    "quantite": 1
-                },
-                {
-                    "id": 1,
-                    "idProduit": 0,
-                    "nomProduit": "Banane",
-                    "descriptionProduit": "La banane est remplit de potassium!",
-                    "prix": 0.79,
-                    "quantite": 1
-                },
-                {
-                    "id": 2,
-                    "idProduit": 4,
-                    "nomProduit": "Abdominaux de reve",
-                    "descriptionProduit": "Achete les, cela fait 3 ans que tu essais mais tu n'y arrives toujours pas",
-                    "prix": 9999,
-                    "quantite": 1
-                }
-            ]
+            "valeur": 0,
+            "items": []
         },
         "historique": [
             {
